@@ -1,6 +1,26 @@
+@keyframes AppearCircle {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        width: 140px;
+        height: 140px;
+    }
+}
 .circle {
+    display: none;
     background-color: white;
     width: 140px;
     height: 140px;
     border-radius: 100%;
+    animation-name: AppearCircle;
+    animation-duration: 1s;
+    animation-play-state: paused;
+}
+.PressHere {
+    font-size: 4rem;
+}
+.PressHere:hover { 
+    cursor: pointer;
 }
