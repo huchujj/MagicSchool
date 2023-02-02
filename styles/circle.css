@@ -18,9 +18,9 @@
     animation-duration: 1s;
     animation-play-state: paused;
 }
-.PressHere {
+.Click {
     font-size: 4rem;
 }
-.PressHere:hover { 
+.Click:hover { 
     cursor: pointer;
 }
