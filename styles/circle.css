@@ -10,6 +10,8 @@
 }
 .circle {
     display: none;
+    position: absolute;
+    z-index: 2;
     background-color: white;
     width: 140px;
     height: 140px;
@@ -18,9 +20,55 @@
     animation-duration: 1s;
     animation-play-state: paused;
 }
-.Click {
-    font-size: 4rem;
+@keyframes blurAnimation {
+    0% {
+        width: 150px;
+        height: 150px;
+        filter: blur(10px);
+    }
+    25% {
+        width: 160px;
+        height: 160px;
+        filter: blur(15px);
+    }
+    50% {
+        width: 145px;
+        height: 145px;
+        filter: blur(12px);
+    }
+    75% {
+        width: 155px;
+        height: 155px;
+        filter: blur(18px);
+    }
+    100% {
+        width: 150px;
+        height: 150px;
+        filter: blur(10px);
+    }
 }
-.Click:hover { 
+.circle_blur {
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff65;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    filter: blur(10px);
+    animation-name: blurAnimation;
+    animation-duration: 2s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+.circle_black {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    background-color: #000000;
+    border-radius: 100%;
+    width: 140px;
+    height: 140px;
+}
+.circle_black:hover {
     cursor: pointer;
 }
