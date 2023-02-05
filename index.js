@@ -4,10 +4,10 @@ function start() {
     let circle_blur = document.getElementById("circle_blur");
 
     let circleAppearSound = new Audio();
-    let introAIvoice = new Audio();
+    let introVoice = new Audio();
 
     circleAppearSound.src = "audio/AppearCircle.mp3";
-    introAIvoice.src = "audio/introAIvoice.mp3";
+    introVoice.src = "audio/introVoice.mp3";
 
     circle_black.style.display = "none";
     circle_blur.style.display = "none";
@@ -16,6 +16,6 @@ function start() {
 
     circleAppearSound.play();
     circleAppearSound.addEventListener("ended", function(){
-        introAIvoice.play();
+        introVoice.play();
     })
 }
