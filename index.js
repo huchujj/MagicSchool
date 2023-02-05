@@ -2,7 +2,7 @@ function start() {
     let circle = document.getElementById("circle");
     let circle_black = document.getElementById("circle_black");
     let circle_blur = document.getElementById("circle_blur");
-    let vocieAnimation = document.getElementById("voiceAnimation");
+    let voiceAnimation = document.getElementById("voiceAnimation");
 
     let circleAppearSound = new Audio();
     let introVoice = new Audio();
@@ -17,7 +17,11 @@ function start() {
 
     circleAppearSound.play();
     circleAppearSound.addEventListener("ended", function(){
+        voiceAnimation.style.display = "flex";
         introVoice.play();
-        vocieAnimation.style.display = "flex";
+        introVoice.addEventListener("ended", function() {
+            voiceAnimation.style.display = "none";
+            circle.style.cursor = "pointer";
+        })
     })
 }
