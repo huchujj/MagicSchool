@@ -1,0 +1,54 @@
+.voiceAnimation {
+    background-color: #000000;
+    width: 500px;
+    height: 500px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.circle1 {
+    background-color: #000000;
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ffffff80 #ffffff80 #000000 #000000;
+    animation-name: rotate1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+.circle2 {
+    background-color: #000000;
+    width: 170px;
+    height: 170px;
+    position: relative;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000000 #000000 #ffffff80 #ffffff80;
+    animation-name: rotate2;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+@keyframes rotate1 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate2 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
